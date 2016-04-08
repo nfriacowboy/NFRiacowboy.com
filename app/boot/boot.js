@@ -17,10 +17,10 @@ angular.module('NFRiaCowboy.boot', ['ngRoute'])
 
         var voice = {
             amplitude: 100,
-            wordgap: 0,
-            pitch: 35,
-            speed: 155,
-            variant: 'f4'
+            wordgap: 1,
+            pitch: 105,
+            speed: 160,
+            variant: 'f2'
         };
 
         meSpeak.loadConfig("components/meSpeak/mespeak_config.json");
