@@ -1,0 +1,35 @@
+{
+  "name": "nfriacowboy",
+  "authors": [
+    "Nuno Fernandes <me@nfriacowboy.com>"
+  ],
+  "description": "NFRiaCowboy Web Site",
+  "main": "",
+  "keywords": [
+    "web",
+    "site"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.nfriacowboy.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0",
+    "angular-google-maps": "^2.3.2",
+    "angular-sanitize": "^1.5.3"
+  },
+  "resolutions": {
+    "angular": "1.5.3"
+  }
+}
