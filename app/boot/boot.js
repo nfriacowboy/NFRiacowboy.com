@@ -30,7 +30,7 @@ angular.module('NFRiaCowboy.boot', ['ngRoute'])
         var nfriacowboyBoot = new ElizaBot();
 
 
-        $scope.conversation = "";
+        $scope.conversation = [];
         $scope.humanText = "";
 
         $scope.elizaReset = function() {
@@ -46,18 +46,30 @@ angular.module('NFRiaCowboy.boot', ['ngRoute'])
                 return;
             }
             else if ($scope.humanText != '') {
-                $scope.conversation += '<p>You:   ' + $scope.humanText + '</p>';
+                $scope.conversation.push({
+                    id: new Date().getTime(),
+                    msg: '<div class="bubble human">' + $scope.humanText + '</div>'});
 
                 nfriacowboyOutput =nfriacowboyBoot.transform($scope.humanText);
             }
-            else if ($scope.conversation == '') {
+            else if ($scope.conversation.length == 0) {
                 nfriacowboyOutput = nfriacowboyBoot.getInitial();
             }
             meSpeak.speak(nfriacowboyOutput, voice);
-            $scope.conversation += '<p>Carmen: ' + nfriacowboyOutput + '</p>';
+            $scope.conversation.push({
+                id: new Date().getTime(),
+                msg: '<div class="imgCarmen"></div><div class="bubble carmen">' + nfriacowboyOutput + '</div>'});
             $scope.humanText = '';
 
         };
 
         $scope.handleNewInput();
+
+        $('#humanTextInput').keyup(function(e){
+            var code = (e.keyCode ? e.keyCode : e.which);
+            if(code == 13 && $scope.humanText != '') { //Enter keycode
+                $scope.handleNewInput();
+                $scope.$apply();
+            }
+        });
     }]);
