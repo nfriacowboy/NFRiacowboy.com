@@ -1,17 +1,17 @@
 <h1>Meet Carmen, NFRiacowboy's nice asistense</h1>
 
 <div>
-    <div id="chatBox" schroll-bottom="conversation">
+    <div id="chatBox" scroll-glue>
         <div ng-repeat="message in conversation track by message.id">
             <div class="chatMessage">
                 <div class="messageTextInMessage" ng-bind-html="message.msg"></div>
             </div>
         </div>
     </div>
+    <div class="enterMessage">
+    <form ng-submit="handleNewInput()">
+        <textarea id="humanTextInput" rows="2" ng-model="humanText"></textarea>
 
+        <input type="submit" value="Send" />
+    </form></div>
 </div>
-<form ng-submit="handleNewInput()">
-    <textarea id="humanTextInput" style="width: 100%" rows="2" ng-model="humanText"></textarea>
-
-<input type="submit" value="Send" />
-</form>

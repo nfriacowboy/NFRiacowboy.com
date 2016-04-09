@@ -33,10 +33,12 @@
 
 #chatBox {
   overflow : auto;
-  width : 100%;
+  width : 50%;
   height : 300px;
   border: 1px solid;
-  padding: 10px 10px 10px 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: auto;
 }
 .chatMessage {
   padding: 2px 40px;
@@ -44,6 +46,16 @@
   border-radius: 25px;
   text-align: left;
   margin-bottom: 8px;
+}
+
+.enterMessage{
+  width: 50%;
+  margin: auto;
+  padding: 0px;
+}
+
+.enterMessage #humanTextInput{
+  width: 100%;
 }
 
 .bubble{
