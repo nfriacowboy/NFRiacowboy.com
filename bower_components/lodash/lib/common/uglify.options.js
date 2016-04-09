@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   'compress': {
     'pure_getters': true,

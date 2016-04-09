@@ -8,7 +8,7 @@ angular.module('NFRiaCowboy', [
     'NFRiaCowboy.version',
     'uiGmapgoogle-maps',
     'ngSanitize',
-    'NFRiaCowboy.directives'
+    'luegg.directives'
 ]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/boot'});
 }]);
